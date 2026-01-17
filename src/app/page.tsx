@@ -61,7 +61,7 @@ const SalaryTracker = () => {
 
   const checkAuthentication = async () => {
     try {
-      const authResult = await window.storage.get('salary-tracker-auth');
+      const authResult = storage.get('salary-tracker-auth');
       if (authResult && authResult.value === 'authenticated') {
         setIsAuthenticated(true);
       }
